@@ -4,7 +4,17 @@ export default ({ mode }) => ({
     base: './',
     plugins: [
         solidPlugin(),
-
+        {
+            enforce: 'pre',
+            resolveId(thisFile) {
+                if (thisFile === 'three') {
+                    return {
+                        id: 'https://cdn.jsdelivr.net/npm/three/build/three.module.min.js',
+                        external: true,
+                    };
+                }
+            },
+        },
         mode === 'analyze' && (visualizer({ open: true, filename: 'visualizer/stat.html' }) as any),
     ],
     server: {
