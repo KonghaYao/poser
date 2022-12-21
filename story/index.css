@@ -1,0 +1,25 @@
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/material-icons-rounded/index.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+    margin: 0;
+}
+kbd {
+    @apply mx-2 rounded-md bg-gradient-to-tr from-slate-100 to-slate-200 px-1 text-xs;
+}
+.font-icon {
+    font-family: 'Material Icons Rounded';
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+}
